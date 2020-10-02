@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button</title>
+</head>
+<body>
+    <input type="button" value=0 id="btn" onclick="incNumber()"/>
+    
+    <label id="display"></label>
+    <h1>click me</h1>
+    <script>
+        var i = 0;
+
+function incNumber() {
+    if (i < 10) {
+        i++;
+    } else if (i = 10) {
+        i = 0;
+    }
+}
+    document.getElementById("display").innerHTML = i;
+    
+    </script>
+</body>
+</html>

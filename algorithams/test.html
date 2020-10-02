@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+</script>
+<style> 
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+  float :right;
+}
+#name {
+padding : 5px auto;
+border-radius : 5px;
+}
+</style>
+</head>
+<body>
+ 
+<button id = "flip">add</button>
+<div id = "panel">
+   FirstName : <input type = "text" id = "name" placeholder="Enter First Name..."/>
+        LastName : <input type = "text" id = "lastname" placeholder="Enter Last Name..."/>
+       MobileNo : <input type = "number" id = "mono" placeholder = "Enter Mobile No..."/>
+        BirthDate : <input type = "number" id = "birth"placeholder = "Enter Birth Date..."/>
+        Password :<input type = "password"id = "password" placeholder="password"/>
+    <button>submit</button>    
+        
+        
+        
+                                     
+
+</div>
+
+</body>
+</html>

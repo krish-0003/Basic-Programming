@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var Makegrid = function(n){
+            var grid =[];
+            for (var i=0;i<n;i++){
+                grid.push([]);
+                for(var j= 0;j<n;j++){
+                    grid[i].push(false);
+                }
+            }
+
+              grid.toggle = function(i,j){
+                  grid[i][j] = !grid[i][j];
+              }
+              
+              grid.visited = function(i,j){
+                return   grid[i][j];
+              }
+              return grid;
+           
+              var pathcounter = function(n){
+                  var paths = 0;
+                  var grid = Makegrid(n);
+
+                  var findpath = function(i,j){
+                      if(i===n-1 && j===n-1){
+                          paths++;
+                          return;
+                      }
+                      if(i <0 || i>=n || j<0 ||j >= n){
+                          return;
+                      }
+                      if(grid.visited(i,j)){
+                          return;
+                      }else{
+                          grid.toogle(i,j);
+                          findpath(i,j+1);
+                          findpath(i+1,j);
+                          findpath(i,j-1);
+                          findpath(i-1,j);
+                          grid.toogle(i,j);
+                      }
+                  };
+                  findpath(0,0);
+                  return paths;
+              }
+        }
+
+        var hu = Makegrid(3);
+        console.log(hu);
+    </script>
+
+</body>
+</html>

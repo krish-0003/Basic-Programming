@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   
+   <button id = "ibtn" onclick="submit()" value ="count" value = "count"> 0</button>
+   <button id = "tu" onclick="reset()" value ="0"  >count</button>
+   <button id = "hu" onclick="decrement()" value = "0" >count</button>
+<script>
+
+
+   var count =0;
+    function submit(){
+       document.getElementById("ibtn").value = count++;
+       console.log(count);
+       
+       }
+       function reset(){
+        document.getElementById("tu").value = 0;
+        count =0;
+        console.log(count);
+       }
+       function decrement(){
+           document.getElementById("hu").value = count--;
+           console.log(count);
+          
+       }
+
+</script>
+
+ 
+</body>
+</html>
